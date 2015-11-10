@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
       if(this.get('isValid')){
         this.get('model').save().then((friend) => {
           console.log(`the friend object is ${friend}`);
-          this.transitionTo('friends.show', friend);
+          this.transitionToRoute('friends.show', friend);
         });
       } else {
         this.set('errorMessage', 'You have to fill all the fields');
@@ -29,7 +29,7 @@ export default Ember.Controller.extend({
       return false;
     },
     cancel() {
-      this.transitionTo('friends');
+      this.transitionToRoute('friends');
       return false;
     }
   }
