@@ -5,7 +5,6 @@ export default Ember.Controller.extend({
   hasFirstName: Ember.computed.notEmpty('model.firstName'),
   hasLastName: Ember.computed.notEmpty('model.lastName'),
   hasTwitter: Ember.computed.notEmpty('model.twitter'),
-
   isValid: Ember.computed.and(
     'hasEmail',
     'hasFirstName',
